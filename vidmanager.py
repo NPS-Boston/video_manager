@@ -15,6 +15,7 @@ GPIO.setup(23, GPIO.OUT) #pin 16 - Status of system light
 
 CNY = '/home/pi/CNY_captions.mp4'
 MASON = '/home/pi/mason.mp4'
+GWS = '/home/pi/good_work.mp4'
 video = OMXPlayer(CNY,args=['-b'])
 print "Initialized"
 print datetime.datetime.now()
@@ -61,10 +62,10 @@ def quitForDay():
 
 schedule.every().day.at("10:00").do(playVid, CNY)
 schedule.every().day.at("11:00").do(playVid, CNY)
-schedule.every().day.at("12:00").do(playVid, MASON)
+schedule.every().day.at("12:00").do(playVid, GWS)
 schedule.every().day.at("13:00").do(playVid, CNY)
 schedule.every().day.at("14:00").do(playVid, CNY)
-schedule.every().day.at("15:00").do(playVid, MASON)
+schedule.every().day.at("15:00").do(playVid, CNY)
 schedule.every().day.at("16:00").do(playVid, CNY)
 
 schedule.every().day.at("9:15").do(playVid, CNY)
@@ -79,7 +80,7 @@ schedule.every().day.at("16:15").do(playVid, CNY)
 schedule.every().day.at("9:30").do(playVid, CNY)
 schedule.every().day.at("10:30").do(playVid, CNY)
 schedule.every().day.at("11:30").do(playVid, CNY)
-#schedule.every().day.at("12:30").do(playVid, CNY)
+schedule.every().day.at("12:30").do(playVid, CNY)
 schedule.every().day.at("13:30").do(playVid, CNY)
 schedule.every().day.at("14:30").do(playVid, CNY)
 schedule.every().day.at("15:30").do(playVid, CNY)
@@ -88,7 +89,7 @@ schedule.every().day.at("16:30").do(playVid, CNY)
 schedule.every().day.at("9:45").do(playVid, CNY)
 schedule.every().day.at("10:45").do(playVid, CNY)
 schedule.every().day.at("11:45").do(playVid, CNY)
-#schedule.every().day.at("12:45").do(playVid, CNY)
+schedule.every().day.at("12:45").do(playVid, CNY)
 schedule.every().day.at("13:45").do(playVid, CNY)
 schedule.every().day.at("14:45").do(playVid, CNY)
 schedule.every().day.at("15:45").do(playVid, CNY)
